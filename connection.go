@@ -120,9 +120,6 @@ func (c *Conn) SendCommand(ctx context.Context, command command.Command) (*RawRe
 	c.writeLock.Lock()
 	defer c.writeLock.Unlock()
 
-	if deadline, ok := ctx.Deadline(); ok {
-		_ = c.conn.SetWriteDeadline(deadline)
-	}
 	_, err := c.conn.Write([]byte(command.BuildMessage() + EndOfMessage))
 	if err != nil {
 		return nil, err
