@@ -13,7 +13,7 @@ package eslgo
 import (
 	"context"
 	"fmt"
-	"github.com/percipia/eslgo/command"
+	"github.com/thisisuniverse/eslgo/command"
 	"net"
 	"time"
 )
