@@ -1,5 +1,5 @@
-module github.com/percipia/eslgo
+module github.com/thisisuniverse/eslgo
 
-go 1.14
+go 1.24
 
 require github.com/stretchr/testify v1.7.0
